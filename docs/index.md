@@ -75,7 +75,6 @@ All images were passed through `mobilenet_v2.preprocess_input()`, which scales p
 
 To reduce overfitting once the model moved from pre-computed features to end-to-end training, the following on-the-fly augmentation layers were applied only to the training set:
 
-Layer	Setting	Effect
 
 `RandomFlip`	`"horizontal"`	Random left-right mirroring
 
@@ -85,7 +84,6 @@ Layer	Setting	Effect
 
 `RandomTranslation`	±20% (height & width)	Random shifting
 
-Augmentation policy by split:
 
 3.3 Feature pre-computation (Model 2a only)
 
