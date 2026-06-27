@@ -155,47 +155,11 @@ Softmax output over 10 units, paired with `sparse_categorical_crossentropy`, mat
 ### Model 2a — Feature Extraction (frozen base, no augmentation)  
 
 <table>
-  <tr>
-    <td width="65%">
-      <img src="https://github.com/user-attachments/assets/48693b42-f56d-451c-bc8d-492c22e1831d"
-           alt="Training and Validation Accuracy"
-           width="100%">
-    </td>
-    <td width="35%" valign="top">
-
-### Hyperparameters  
-
-
-| Hyperparameter | Value |  
-|----------------|--------|  
-
-| Optimizer | Adam |  
-
-| Learning rate | `2e-5` |  
-
-| Loss | `sparse_categorical_crossentropy` |  
-
-| Metric | `accuracy` |  
-
-| Epochs | `30` |  
-
-| Batch size | `20` |  
-
-| Trainable base | No (fully frozen) | 
-
-</td>
-  </tr>
-</table>
-
-Result:   
-Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81% by epoch 30. Validation loss flattened near 0.58 while training loss kept falling — a sign of mild overfitting, as the gap between training and validation accuracy widened over time.
-
-<table>
 <tr>
-<td width="50%" valign="top">
-<img width="901" height="359" alt="image" src="https://github.com/user-attachments/assets/48693b42-f56d-451c-bc8d-492c22e1831d" />
+<td width="60%" valign="top">
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/48693b42-f56d-451c-bc8d-492c22e1831d" />
 </td>
-<td width="50%" valign="top">
+<td width="40%" valign="top">
 
 <table>
 <tr><th>Hyperparameter</th><th>Value</th></tr>
@@ -212,16 +176,19 @@ Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81%
 </tr>
 </table>
 
+Result:   
+Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81% by epoch 30. Validation loss flattened near 0.58 while training loss kept falling — a sign of mild overfitting, as the gap between training and validation accuracy widened over time.
+
 ### Model 2b — Feature Extraction + Data Augmentation (frozen base)
 
 <table>
   <tr>
-    <td width="75%" valign="top">
+    <td width="60%" valign="top">
       <img src="https://github.com/user-attachments/assets/6a3b732d-bd69-4c53-8cbe-4361a2bf69b2"
            alt="Training and Validation Accuracy"
            width="400">
     </td>
-    <td width="25%" valign="top">
+    <td width="40%" valign="top">
 
 ### Hyperparameters  
 
@@ -244,6 +211,28 @@ Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81%
 Result: 
 Training and validation accuracy tracked each other closely, converging around 77–80%, with both still rising slightly at epoch 50. 
 The train–validation gap narrowed substantially compared to Model 2a, and loss curves for both sets declined together and converged near 0.60–0.65 — indicating that overfitting was largely resolved at the cost of a slightly lower peak accuracy than 2a (a typical augmentation trade-off: harder training task, better generalisation).
+
+<table>
+<tr>
+<td width="60%" valign="top">
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/6a3b732d-bd69-4c53-8cbe-4361a2bf69b2" />
+</td>
+<td width="40%" valign="top">
+
+<table>
+<tr><th>Hyperparameter</th><th>Value</th></tr>
+<tr><td>Optimizer</td><td>Adam</td></tr>
+<tr><td>Learning rate</td><td>2e-5</td></tr>
+<tr><td>Loss</td><td><code>sparse_categorical_crossentropy</code></td></tr>
+<tr><td>Metric</td><td>accuracy</td></tr>
+<tr><td>Epochs</td><td>50</td></tr>
+<tr><td>Batch size</td><td>20</td></tr>
+<tr><td>Trainable base</td><td>No (frozen, but trained end-to-end rather than on cached features)</td></tr>
+</table>
+
+</td>
+</tr>
+</table>
 
 ### Model 2c — Fine-Tuning (selective unfreezing)
 
