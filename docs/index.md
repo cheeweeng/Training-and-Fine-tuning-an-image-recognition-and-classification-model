@@ -166,15 +166,15 @@ Softmax output over 10 units, paired with `sparse_categorical_crossentropy`, mat
 ### Hyperparameters  
 
 
-| Hyperparameter | Value |
-|----------------|--------|
-| Optimizer | Adam |
-| Learning rate | `2e-5` |
-| Loss | `sparse_categorical_crossentropy` |
-| Metric | `accuracy` |
-| Epochs | `30` |
-| Batch size | `20` |
-| Trainable base | No (fully frozen) |
+| Hyperparameter | Value |  
+|----------------|--------|  
+| Optimizer | Adam |  
+| Learning rate | `2e-5` |  
+| Loss | `sparse_categorical_crossentropy` |  
+| Metric | `accuracy` |  
+| Epochs | `30` |  
+| Batch size | `20` |  
+| Trainable base | No (fully frozen) |  
 </td>
   </tr>
 </table>
@@ -196,16 +196,16 @@ Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81%
 ### Hyperparameters  
 
 
-| Hyperparameter | Value |
-|---|---|
-| Optimizer | Adam |
-| Learning rate | `2e-5` |
-| Loss | `sparse_categorical_crossentropy` |
-| Metric | `accuracy` |
-| Epochs | `50` |
-| Batch size | `20` |
-| Trainable base | No (frozen, but trained end-to-end rather than on cached features) |
-| Augmentation | Flip, rotation, zoom, translation (train set only) |
+| Hyperparameter | Value |  
+|---|---|  
+| Optimizer | Adam |  
+| Learning rate | `2e-5` |  
+| Loss | `sparse_categorical_crossentropy` |  
+| Metric | `accuracy` |  
+| Epochs | `50` |  
+| Batch size | `20` |  
+| Trainable base | No (frozen, but trained end-to-end rather than on cached features) |  
+| Augmentation | Flip, rotation, zoom, translation (train set only) |  
 
 </td>
   </tr>
@@ -229,10 +229,10 @@ The train–validation gap narrowed substantially compared to Model 2a, and loss
 ### Hyperparameters  
 
 
-| Hyperparameter | Value |
-|---|---|
-| Learning rate | `2e-6` (~10× lower than feature-extraction phase) |
-| Augmentation | Same as Model 2b |
+| Hyperparameter | Value |  
+|---|---|  
+| Learning rate | `2e-6` (~10× lower than feature-extraction phase) |  
+| Augmentation | Same as Model 2b |  
 
 </td>
   </tr>
