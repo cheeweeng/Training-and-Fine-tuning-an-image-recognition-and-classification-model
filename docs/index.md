@@ -182,37 +182,6 @@ Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81%
 ### Model 2b — Feature Extraction + Data Augmentation (frozen base)
 
 <table>
-  <tr>
-    <td width="60%" valign="top">
-      <img src="https://github.com/user-attachments/assets/6a3b732d-bd69-4c53-8cbe-4361a2bf69b2"
-           alt="Training and Validation Accuracy"
-           width="400">
-    </td>
-    <td width="40%" valign="top">
-
-### Hyperparameters  
-
-
-| Hyperparameter | Value |  
-|---|---|  
-| Optimizer | Adam |  
-| Learning rate | `2e-5` |  
-| Loss | `sparse_categorical_crossentropy` |  
-| Metric | `accuracy` |  
-| Epochs | `50` |  
-| Batch size | `20` |  
-| Trainable base | No (frozen, but trained end-to-end rather than on cached features) |  
-| Augmentation | Flip, rotation, zoom, translation (train set only) |  
-
-</td>
-  </tr>
-</table>	
-
-Result: 
-Training and validation accuracy tracked each other closely, converging around 77–80%, with both still rising slightly at epoch 50. 
-The train–validation gap narrowed substantially compared to Model 2a, and loss curves for both sets declined together and converged near 0.60–0.65 — indicating that overfitting was largely resolved at the cost of a slightly lower peak accuracy than 2a (a typical augmentation trade-off: harder training task, better generalisation).
-
-<table>
 <tr>
 <td width="60%" valign="top">
 <img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/6a3b732d-bd69-4c53-8cbe-4361a2bf69b2" />
@@ -234,27 +203,27 @@ The train–validation gap narrowed substantially compared to Model 2a, and loss
 </tr>
 </table>
 
+Result: 
+Training and validation accuracy tracked each other closely, converging around 77–80%, with both still rising slightly at epoch 50. 
+The train–validation gap narrowed substantially compared to Model 2a, and loss curves for both sets declined together and converged near 0.60–0.65 — indicating that overfitting was largely resolved at the cost of a slightly lower peak accuracy than 2a (a typical augmentation trade-off: harder training task, better generalisation).
+
 ### Model 2c — Fine-Tuning (selective unfreezing)
 
 <table>
-  <tr>
-    <td width="65%" valign="top">
-      <img src="https://github.com/user-attachments/assets/99d79696-7aeb-4245-871b-83ca42609b5c"
-           alt="Fine-tuning Training and Validation Accuracy"
-           width="400">
-    </td>
-    <td width="35%" valign="top">
+<tr>
+<td width="60%" valign="top">
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/99d79696-7aeb-4245-871b-83ca42609b5c" />
+</td>
+<td width="40%" valign="top">
 
-### Hyperparameters  
-
-
-| Hyperparameter | Value |  
-|---|---|  
-| Learning rate | `2e-6` (~10× lower than feature-extraction phase) |  
-| Augmentation | Same as Model 2b |  
+<table>
+<tr><th>Hyperparameter</th><th>Value</th></tr>
+<tr><td>Learning rate</td><td>2e-6 (~10× lower than feature-extraction phase)</td></tr>
+<tr><td>Augmentation</td><td>Same as Model 2b</td></tr>
+</table>
 
 </td>
-  </tr>
+</tr>
 </table>
 
 
