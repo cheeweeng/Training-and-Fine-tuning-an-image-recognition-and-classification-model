@@ -243,15 +243,17 @@ for layer in conv_base.layers:
     layer.trainable = not freeze
 ```
 Result: Validation accuracy held essentially flat around 0.80–0.804 across all 30 epochs, with training accuracy actually below validation accuracy for most of the run. This is expected behaviour, not a bug: augmentation makes the training set harder than the (unaugmented) validation set, and Dropout is active only during training. There was no evidence of overfitting, but the model appeared to have plateaued / slightly underfit — the learning rate was likely too conservative to make further progress in 30 epochs.  
+
 Fine-tuning added computational cost in terms of longer training time without meaningful gains. The lesson learnt here is that fine-tuning may not be always worth the effort with such negligible benefits. Looking back, I think Model 2b was already performing near the optimal level for my dataset and architecture, therefore I will select Model 2b as the best model.
 
-Hyperparameter tuning summary
-| Model | LR | Epochs | Augmentation |
-|-------|----|--------|-------------|
-| 2a | `2e-5` | 30 | No |
-| 2b | `2e-5` | 50 | Yes |
-| 2c | `2e-6` | 30 | Yes |
+Hyperparameter tuning summary  
 
+<table>
+<tr><th>Model</th><th>LR</th><th>Epochs</th><th>Augmentation</th></tr>
+<tr><td>2a</td><td><code>2e-5</code></td><td>30</td><td>No</td></tr>
+<tr><td>2b</td><td><code>2e-5</code></td><td>50</td><td>Yes</td></tr>
+<tr><td>2c</td><td><code>2e-6</code></td><td>30</td><td>Yes</td></tr>
+</table>
 
 # 6. Model Evaluation on the Test Set
 
