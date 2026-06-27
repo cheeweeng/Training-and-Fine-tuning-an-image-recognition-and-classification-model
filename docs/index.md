@@ -163,7 +163,8 @@ Softmax output over 10 units, paired with `sparse_categorical_crossentropy`, mat
     </td>
     <td width="35%" valign="top">
 
-### Hyperparameters
+### Hyperparameters  
+
 
 | Hyperparameter | Value |
 |----------------|--------|
@@ -192,7 +193,8 @@ Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81%
     </td>
     <td width="25%" valign="top">
 
-### Hyperparameters
+### Hyperparameters  
+
 
 | Hyperparameter | Value |
 |---|---|
@@ -224,7 +226,8 @@ The train–validation gap narrowed substantially compared to Model 2a, and loss
     </td>
     <td width="35%" valign="top">
 
-### Hyperparameters
+### Hyperparameters  
+
 
 | Hyperparameter | Value |
 |---|---|
