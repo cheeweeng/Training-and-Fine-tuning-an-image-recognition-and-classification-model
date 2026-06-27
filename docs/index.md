@@ -190,6 +190,28 @@ Softmax output over 10 units, paired with `sparse_categorical_crossentropy`, mat
 Result:   
 Training accuracy climbed to ~84%; validation accuracy plateaued around 80–81% by epoch 30. Validation loss flattened near 0.58 while training loss kept falling — a sign of mild overfitting, as the gap between training and validation accuracy widened over time.
 
+<table>
+<tr>
+<td width="50%" valign="top">
+<img width="901" height="359" alt="image" src="https://github.com/user-attachments/assets/48693b42-f56d-451c-bc8d-492c22e1831d" />
+</td>
+<td width="50%" valign="top">
+
+<table>
+<tr><th>Hyperparameter</th><th>Value</th></tr>
+<tr><td>Optimizer</td><td>Adam</td></tr>
+<tr><td>Learning rate</td><td>2e-5</td></tr>
+<tr><td>Loss</td><td><code>sparse_categorical_crossentropy</code></td></tr>
+<tr><td>Metric</td><td>accuracy</td></tr>
+<tr><td>Epochs</td><td>30</td></tr>
+<tr><td>Batch size</td><td>20</td></tr>
+<tr><td>Trainable base</td><td>No (fully frozen)</td></tr>
+</table>
+
+</td>
+</tr>
+</table>
+
 ### Model 2b — Feature Extraction + Data Augmentation (frozen base)
 
 <table>
