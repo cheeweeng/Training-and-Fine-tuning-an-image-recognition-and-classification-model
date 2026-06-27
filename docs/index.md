@@ -173,7 +173,7 @@ Softmax output over 10 units, paired with `sparse_categorical_crossentropy`, mat
 | Epochs | `30` |
 | Batch size | `20` |
 | Trainable base | No (fully frozen) |
-
+</td>
   </tr>
 </table>
 
