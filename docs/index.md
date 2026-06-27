@@ -168,13 +168,21 @@ Softmax output over 10 units, paired with `sparse_categorical_crossentropy`, mat
 
 | Hyperparameter | Value |  
 |----------------|--------|  
+
 | Optimizer | Adam |  
+
 | Learning rate | `2e-5` |  
+
 | Loss | `sparse_categorical_crossentropy` |  
+
 | Metric | `accuracy` |  
+
 | Epochs | `30` |  
+
 | Batch size | `20` |  
-| Trainable base | No (fully frozen) |  
+
+| Trainable base | No (fully frozen) | 
+
 </td>
   </tr>
 </table>
