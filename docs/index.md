@@ -153,6 +153,7 @@ Softmax output over 10 units, paired with `sparse_categorical_crossentropy`, mat
 # 5. Hyperparameters & Training Iterations
 
 ### Model 2a — Feature Extraction (frozen base, no augmentation)  
+
 <table>
   <tr>
     <td width="65%">
