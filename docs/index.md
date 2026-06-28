@@ -255,9 +255,17 @@ Hyperparameter tuning summary
 <tr><td>2c</td><td><code>2e-6</code></td><td>30</td><td>Yes</td></tr>
 </table>
 
-# 6. Model Evaluation on the Test Set
-
-<img width="800" height="370" alt="image" src="https://github.com/user-attachments/assets/6184f209-4619-4972-8e69-16cff26649bd" />    
+# 6. Model Evaluation on the Test Set  
+<table>
+<tr>
+<td width="50%" valign="top">
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/6184f209-4619-4972-8e69-16cff26649bd" />
+</td>
+<td width="50%" valign="top">
+<img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/8c7c0bb8-aac0-4437-8bb8-02e4e6213bb2" />
+</td>
+</tr>
+</table>
 
 Model 1e achieved a test accuracy of 55.20% with a test loss of 1.7575. In contrast, Model 2b achieved a much higher test accuracy of 82.41% with a substantially lower test loss of 0.5149. These results clearly indicate that Model 2b generalised far better to unseen test images compared to Model 1e.
 
