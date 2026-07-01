@@ -1,9 +1,9 @@
 # Food Image Classification with MobileNetV2 (Transfer Learning)  
-Author: Ng Chee Wee (3303451Y)
+Author: Ng Chee Wee
 
 Objective: Classify images of food into 10 categories using transfer learning with a pre-trained MobileNetV2 convolutional base.  
 
-This README documents the full pipeline implemented in `DLIR_assignment_model_2_NgCheeWee.ipynb` — data loading, preprocessing, model architecture, hyperparameter tuning across three iterations, evaluation results, and a final recommendation.  
+This README documents the full pipeline implemented in DLIR assignment model 2 — data loading, preprocessing, model architecture, hyperparameter tuning across three iterations, evaluation results, and a final recommendation.  
 
 ---
 # 1. Overview of Approach  
